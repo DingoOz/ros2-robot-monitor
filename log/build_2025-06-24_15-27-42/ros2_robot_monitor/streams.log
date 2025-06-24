@@ -1,0 +1,26 @@
+[0.012s] Invoking command in '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor -- -j12 -l12
+[0.078s] [ 25%] Building CXX object CMakeFiles/ros2_monitor.dir/src/ncurses_display.cpp.o
+[0.079s] [ 50%] Building CXX object CMakeFiles/ros2_monitor.dir/src/monitor.cpp.o
+[4.060s] [ 75%] Linking CXX executable ros2_monitor
+[5.737s] [100%] Built target ros2_monitor
+[5.750s] Invoked command in '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor -- -j12 -l12
+[5.761s] Invoking command in '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor
+[5.770s] -- Install configuration: ""
+[5.770s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/lib/ros2_robot_monitor/ros2_monitor
+[5.794s] -- Set non-toolchain portion of runtime path of "/home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/lib/ros2_robot_monitor/ros2_monitor" to ""
+[5.795s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ament_index/resource_index/package_run_dependencies/ros2_robot_monitor
+[5.795s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ament_index/resource_index/parent_prefix_path/ros2_robot_monitor
+[5.795s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/ament_prefix_path.sh
+[5.795s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/ament_prefix_path.dsv
+[5.795s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/path.sh
+[5.796s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/path.dsv
+[5.796s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.bash
+[5.796s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.sh
+[5.796s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.zsh
+[5.796s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.dsv
+[5.796s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/package.dsv
+[5.796s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ament_index/resource_index/packages/ros2_robot_monitor
+[5.796s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/cmake/ros2_robot_monitorConfig.cmake
+[5.796s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/cmake/ros2_robot_monitorConfig-version.cmake
+[5.796s] -- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/package.xml
+[5.797s] Invoked command in '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor

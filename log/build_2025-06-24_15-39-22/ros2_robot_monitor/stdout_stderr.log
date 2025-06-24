@@ -1,0 +1,21 @@
+[ 25%] Building CXX object CMakeFiles/ros2_monitor.dir/src/topic_monitor.cpp.o
+[ 50%] Linking CXX executable ros2_monitor
+[100%] Built target ros2_monitor
+-- Install configuration: ""
+-- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/lib/ros2_robot_monitor/ros2_monitor
+-- Set non-toolchain portion of runtime path of "/home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/lib/ros2_robot_monitor/ros2_monitor" to ""
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ament_index/resource_index/package_run_dependencies/ros2_robot_monitor
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ament_index/resource_index/parent_prefix_path/ros2_robot_monitor
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/ament_prefix_path.sh
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/path.sh
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/path.dsv
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.bash
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.sh
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.zsh
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.dsv
+-- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/package.dsv
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ament_index/resource_index/packages/ros2_robot_monitor
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/cmake/ros2_robot_monitorConfig.cmake
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/cmake/ros2_robot_monitorConfig-version.cmake
+-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/package.xml

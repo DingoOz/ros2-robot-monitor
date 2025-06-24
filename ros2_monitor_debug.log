@@ -1,0 +1,8 @@
+=== Monitor started ===
+Timer created, starting initial discovery
+discover_topics() called
+Discovering topics, found 2 topics
+Found topic: /parameter_events
+Skipping internal topic: /parameter_events
+Found topic: /rosout
+Skipping internal topic: /rosout

@@ -1,0 +1,2 @@
+source;share/ros2_robot_monitor/environment/ament_prefix_path.sh
+source;share/ros2_robot_monitor/environment/path.sh

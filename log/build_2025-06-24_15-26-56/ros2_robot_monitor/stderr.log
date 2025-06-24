@@ -1,0 +1,12 @@
+In file included from /home/dingo/Programming/ros2-robot-monitor/include/ros2_robot_monitor/ncurses_display.hpp:3,
+                 from /home/dingo/Programming/ros2-robot-monitor/src/ncurses_display.cpp:1:
+/opt/ros/jazzy/include/diagnostic_msgs/diagnostic_msgs/msg/detail/diagnostic_status__struct.hpp:120:34: error: expected unqualified-id before numeric constant
+  120 |   static constexpr unsigned char OK =
+      |                                  ^~
+/opt/ros/jazzy/include/diagnostic_msgs/diagnostic_msgs/msg/detail/diagnostic_status__struct.hpp:120:34: error: expected ‘)’ before numeric constant
+  120 |   static constexpr unsigned char OK =
+      |                                  ^~
+gmake[2]: *** [CMakeFiles/ros2_monitor.dir/build.make:104: CMakeFiles/ros2_monitor.dir/src/ncurses_display.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/ros2_monitor.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

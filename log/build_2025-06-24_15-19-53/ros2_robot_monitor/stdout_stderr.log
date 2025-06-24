@@ -1,0 +1,789 @@
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+-- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+-- Found diagnostic_msgs: 5.3.6 (/opt/ros/jazzy/share/diagnostic_msgs/cmake)
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+-- Checking for module 'ncurses'
+--   Found ncurses, version 6.4.20240113
+-- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/dingo/Programming/ros2-robot-monitor/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor
+[ 25%] Building CXX object CMakeFiles/ros2_monitor.dir/src/monitor.cpp.o
+[ 50%] Building CXX object CMakeFiles/ros2_monitor.dir/src/ncurses_display.cpp.o
+[ 75%] Building CXX object CMakeFiles/ros2_monitor.dir/src/topic_monitor.cpp.o
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::String_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:37:57:   required from here
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:87:34: error: no match for ‘operator=’ (operand types are ‘std::map<std::__cxx11::basic_string<char>, std::shared_ptr<rclcpp::GenericSubscription> >::mapped_type’ {aka ‘std::shared_ptr<rclcpp::GenericSubscription>’} and ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > > >’)
+   87 |         subscribers_[topic_name] = subscription;
+In file included from /usr/include/c++/13/memory:80,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:169,
+                 from /home/dingo/Programming/ros2-robot-monitor/include/ros2_robot_monitor/topic_monitor.hpp:3,
+                 from /home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:1:
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = rclcpp::GenericSubscription]’
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > > >&; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:418:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<rclcpp::GenericSubscription>::operator=(const std::shared_ptr<_Tp>&) [with _Yp = rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:87:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::String_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:37:57:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::String_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:37:57:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = rclcpp::GenericSubscription]’
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:87:34: note:   ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::auto_ptr<_Up>’
+   87 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > > >; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:446:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<rclcpp::GenericSubscription>::operator=(std::shared_ptr<_Tp>&&) [with _Yp = rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:87:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::String_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:37:57:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::String_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:37:57:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = rclcpp::GenericSubscription]’
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:87:34: note:   ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+   87 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::GenericSubscription]’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > > >’ to ‘const std::shared_ptr<rclcpp::GenericSubscription>&’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > > >’ to ‘std::shared_ptr<rclcpp::GenericSubscription>&&’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:78:88: warning: unused parameter ‘type_name’ [-Wunused-parameter]
+   78 | void TopicMonitor::create_subscriber(const std::string& topic_name, const std::string& type_name) {
+      |                                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Int32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:40:56:   required from here
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:94:34: error: no match for ‘operator=’ (operand types are ‘std::map<std::__cxx11::basic_string<char>, std::shared_ptr<rclcpp::GenericSubscription> >::mapped_type’ {aka ‘std::shared_ptr<rclcpp::GenericSubscription>’} and ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Int32_<std::allocator<void> >, std_msgs::msg::Int32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void> > > >’)
+   94 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = rclcpp::GenericSubscription]’
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Int32_<std::allocator<void> >, std_msgs::msg::Int32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void> > > >&; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:418:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<rclcpp::GenericSubscription>::operator=(const std::shared_ptr<_Tp>&) [with _Yp = rclcpp::Subscription<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Int32_<std::allocator<void> >, std_msgs::msg::Int32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:94:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Int32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:40:56:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Int32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:40:56:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = rclcpp::GenericSubscription]’
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:94:34: note:   ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Int32_<std::allocator<void> >, std_msgs::msg::Int32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::auto_ptr<_Up>’
+   94 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Int32_<std::allocator<void> >, std_msgs::msg::Int32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void> > > >; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:446:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<rclcpp::GenericSubscription>::operator=(std::shared_ptr<_Tp>&&) [with _Yp = rclcpp::Subscription<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Int32_<std::allocator<void> >, std_msgs::msg::Int32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:94:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Int32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:40:56:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Int32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:40:56:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = rclcpp::GenericSubscription]’
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:94:34: note:   ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Int32_<std::allocator<void> >, std_msgs::msg::Int32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+   94 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::GenericSubscription]’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Int32_<std::allocator<void> >, std_msgs::msg::Int32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void> > > >’ to ‘const std::shared_ptr<rclcpp::GenericSubscription>&’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Int32_<std::allocator<void> >, std_msgs::msg::Int32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Int32_<std::allocator<void> >, std::allocator<void> > > >’ to ‘std::shared_ptr<rclcpp::GenericSubscription>&&’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:78:88: warning: unused parameter ‘type_name’ [-Wunused-parameter]
+   78 | void TopicMonitor::create_subscriber(const std::string& topic_name, const std::string& type_name) {
+      |                                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Float32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:43:58:   required from here
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:101:34: error: no match for ‘operator=’ (operand types are ‘std::map<std::__cxx11::basic_string<char>, std::shared_ptr<rclcpp::GenericSubscription> >::mapped_type’ {aka ‘std::shared_ptr<rclcpp::GenericSubscription>’} and ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Float32_<std::allocator<void> >, std_msgs::msg::Float32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void> > > >’)
+  101 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = rclcpp::GenericSubscription]’
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Float32_<std::allocator<void> >, std_msgs::msg::Float32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void> > > >&; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:418:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<rclcpp::GenericSubscription>::operator=(const std::shared_ptr<_Tp>&) [with _Yp = rclcpp::Subscription<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Float32_<std::allocator<void> >, std_msgs::msg::Float32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:101:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Float32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:43:58:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Float32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:43:58:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = rclcpp::GenericSubscription]’
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:101:34: note:   ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Float32_<std::allocator<void> >, std_msgs::msg::Float32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::auto_ptr<_Up>’
+  101 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Float32_<std::allocator<void> >, std_msgs::msg::Float32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void> > > >; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:446:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<rclcpp::GenericSubscription>::operator=(std::shared_ptr<_Tp>&&) [with _Yp = rclcpp::Subscription<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Float32_<std::allocator<void> >, std_msgs::msg::Float32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:101:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Float32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:43:58:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Float32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:43:58:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = rclcpp::GenericSubscription]’
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:101:34: note:   ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Float32_<std::allocator<void> >, std_msgs::msg::Float32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  101 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::GenericSubscription]’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Float32_<std::allocator<void> >, std_msgs::msg::Float32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void> > > >’ to ‘const std::shared_ptr<rclcpp::GenericSubscription>&’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Float32_<std::allocator<void> >, std_msgs::msg::Float32_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Float32_<std::allocator<void> >, std::allocator<void> > > >’ to ‘std::shared_ptr<rclcpp::GenericSubscription>&&’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:78:88: warning: unused parameter ‘type_name’ [-Wunused-parameter]
+   78 | void TopicMonitor::create_subscriber(const std::string& topic_name, const std::string& type_name) {
+      |                                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Bool_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:46:55:   required from here
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:108:34: error: no match for ‘operator=’ (operand types are ‘std::map<std::__cxx11::basic_string<char>, std::shared_ptr<rclcpp::GenericSubscription> >::mapped_type’ {aka ‘std::shared_ptr<rclcpp::GenericSubscription>’} and ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Bool_<std::allocator<void> >, std_msgs::msg::Bool_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void> > > >’)
+  108 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = rclcpp::GenericSubscription]’
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Bool_<std::allocator<void> >, std_msgs::msg::Bool_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void> > > >&; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:418:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<rclcpp::GenericSubscription>::operator=(const std::shared_ptr<_Tp>&) [with _Yp = rclcpp::Subscription<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Bool_<std::allocator<void> >, std_msgs::msg::Bool_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:108:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Bool_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:46:55:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Bool_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:46:55:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = rclcpp::GenericSubscription]’
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:108:34: note:   ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Bool_<std::allocator<void> >, std_msgs::msg::Bool_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::auto_ptr<_Up>’
+  108 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Bool_<std::allocator<void> >, std_msgs::msg::Bool_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void> > > >; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:446:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<rclcpp::GenericSubscription>::operator=(std::shared_ptr<_Tp>&&) [with _Yp = rclcpp::Subscription<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Bool_<std::allocator<void> >, std_msgs::msg::Bool_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:108:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Bool_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:46:55:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = std_msgs::msg::Bool_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:46:55:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = rclcpp::GenericSubscription]’
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:108:34: note:   ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Bool_<std::allocator<void> >, std_msgs::msg::Bool_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  108 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::GenericSubscription]’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Bool_<std::allocator<void> >, std_msgs::msg::Bool_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void> > > >’ to ‘const std::shared_ptr<rclcpp::GenericSubscription>&’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Bool_<std::allocator<void> >, std_msgs::msg::Bool_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Bool_<std::allocator<void> >, std::allocator<void> > > >’ to ‘std::shared_ptr<rclcpp::GenericSubscription>&&’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:78:88: warning: unused parameter ‘type_name’ [-Wunused-parameter]
+   78 | void TopicMonitor::create_subscriber(const std::string& topic_name, const std::string& type_name) {
+      |                                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = geometry_msgs::msg::Twist_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:49:61:   required from here
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:115:34: error: no match for ‘operator=’ (operand types are ‘std::map<std::__cxx11::basic_string<char>, std::shared_ptr<rclcpp::GenericSubscription> >::mapped_type’ {aka ‘std::shared_ptr<rclcpp::GenericSubscription>’} and ‘std::shared_ptr<rclcpp::Subscription<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void>, geometry_msgs::msg::Twist_<std::allocator<void> >, geometry_msgs::msg::Twist_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void> > > >’)
+  115 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = rclcpp::GenericSubscription]’
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<rclcpp::Subscription<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void>, geometry_msgs::msg::Twist_<std::allocator<void> >, geometry_msgs::msg::Twist_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void> > > >&; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:418:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<rclcpp::GenericSubscription>::operator=(const std::shared_ptr<_Tp>&) [with _Yp = rclcpp::Subscription<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void>, geometry_msgs::msg::Twist_<std::allocator<void> >, geometry_msgs::msg::Twist_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:115:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = geometry_msgs::msg::Twist_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:49:61:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = geometry_msgs::msg::Twist_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:49:61:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = rclcpp::GenericSubscription]’
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:115:34: note:   ‘std::shared_ptr<rclcpp::Subscription<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void>, geometry_msgs::msg::Twist_<std::allocator<void> >, geometry_msgs::msg::Twist_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::auto_ptr<_Up>’
+  115 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<rclcpp::Subscription<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void>, geometry_msgs::msg::Twist_<std::allocator<void> >, geometry_msgs::msg::Twist_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void> > > >; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:446:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<rclcpp::GenericSubscription>::operator=(std::shared_ptr<_Tp>&&) [with _Yp = rclcpp::Subscription<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void>, geometry_msgs::msg::Twist_<std::allocator<void> >, geometry_msgs::msg::Twist_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:115:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = geometry_msgs::msg::Twist_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:49:61:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = geometry_msgs::msg::Twist_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:49:61:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = rclcpp::GenericSubscription]’
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:115:34: note:   ‘std::shared_ptr<rclcpp::Subscription<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void>, geometry_msgs::msg::Twist_<std::allocator<void> >, geometry_msgs::msg::Twist_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  115 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::GenericSubscription]’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void>, geometry_msgs::msg::Twist_<std::allocator<void> >, geometry_msgs::msg::Twist_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void> > > >’ to ‘const std::shared_ptr<rclcpp::GenericSubscription>&’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void>, geometry_msgs::msg::Twist_<std::allocator<void> >, geometry_msgs::msg::Twist_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void> > > >’ to ‘std::shared_ptr<rclcpp::GenericSubscription>&&’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:78:88: warning: unused parameter ‘type_name’ [-Wunused-parameter]
+   78 | void TopicMonitor::create_subscriber(const std::string& topic_name, const std::string& type_name) {
+      |                                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = nav_msgs::msg::Odometry_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:52:59:   required from here
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:122:34: error: no match for ‘operator=’ (operand types are ‘std::map<std::__cxx11::basic_string<char>, std::shared_ptr<rclcpp::GenericSubscription> >::mapped_type’ {aka ‘std::shared_ptr<rclcpp::GenericSubscription>’} and ‘std::shared_ptr<rclcpp::Subscription<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void>, nav_msgs::msg::Odometry_<std::allocator<void> >, nav_msgs::msg::Odometry_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void> > > >’)
+  122 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = rclcpp::GenericSubscription]’
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<rclcpp::Subscription<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void>, nav_msgs::msg::Odometry_<std::allocator<void> >, nav_msgs::msg::Odometry_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void> > > >&; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:418:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<rclcpp::GenericSubscription>::operator=(const std::shared_ptr<_Tp>&) [with _Yp = rclcpp::Subscription<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void>, nav_msgs::msg::Odometry_<std::allocator<void> >, nav_msgs::msg::Odometry_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:122:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = nav_msgs::msg::Odometry_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:52:59:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = nav_msgs::msg::Odometry_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:52:59:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = rclcpp::GenericSubscription]’
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:122:34: note:   ‘std::shared_ptr<rclcpp::Subscription<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void>, nav_msgs::msg::Odometry_<std::allocator<void> >, nav_msgs::msg::Odometry_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::auto_ptr<_Up>’
+  122 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<rclcpp::Subscription<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void>, nav_msgs::msg::Odometry_<std::allocator<void> >, nav_msgs::msg::Odometry_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void> > > >; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:446:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<rclcpp::GenericSubscription>::operator=(std::shared_ptr<_Tp>&&) [with _Yp = rclcpp::Subscription<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void>, nav_msgs::msg::Odometry_<std::allocator<void> >, nav_msgs::msg::Odometry_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:122:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = nav_msgs::msg::Odometry_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:52:59:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = nav_msgs::msg::Odometry_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:52:59:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = rclcpp::GenericSubscription]’
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:122:34: note:   ‘std::shared_ptr<rclcpp::Subscription<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void>, nav_msgs::msg::Odometry_<std::allocator<void> >, nav_msgs::msg::Odometry_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  122 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::GenericSubscription]’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void>, nav_msgs::msg::Odometry_<std::allocator<void> >, nav_msgs::msg::Odometry_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void> > > >’ to ‘const std::shared_ptr<rclcpp::GenericSubscription>&’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void>, nav_msgs::msg::Odometry_<std::allocator<void> >, nav_msgs::msg::Odometry_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<nav_msgs::msg::Odometry_<std::allocator<void> >, std::allocator<void> > > >’ to ‘std::shared_ptr<rclcpp::GenericSubscription>&&’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:78:88: warning: unused parameter ‘type_name’ [-Wunused-parameter]
+   78 | void TopicMonitor::create_subscriber(const std::string& topic_name, const std::string& type_name) {
+      |                                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::LaserScan_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:55:63:   required from here
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:129:34: error: no match for ‘operator=’ (operand types are ‘std::map<std::__cxx11::basic_string<char>, std::shared_ptr<rclcpp::GenericSubscription> >::mapped_type’ {aka ‘std::shared_ptr<rclcpp::GenericSubscription>’} and ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::LaserScan_<std::allocator<void> >, sensor_msgs::msg::LaserScan_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void> > > >’)
+  129 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = rclcpp::GenericSubscription]’
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::LaserScan_<std::allocator<void> >, sensor_msgs::msg::LaserScan_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void> > > >&; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:418:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<rclcpp::GenericSubscription>::operator=(const std::shared_ptr<_Tp>&) [with _Yp = rclcpp::Subscription<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::LaserScan_<std::allocator<void> >, sensor_msgs::msg::LaserScan_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:129:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::LaserScan_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:55:63:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::LaserScan_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:55:63:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = rclcpp::GenericSubscription]’
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:129:34: note:   ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::LaserScan_<std::allocator<void> >, sensor_msgs::msg::LaserScan_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::auto_ptr<_Up>’
+  129 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::LaserScan_<std::allocator<void> >, sensor_msgs::msg::LaserScan_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void> > > >; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:446:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<rclcpp::GenericSubscription>::operator=(std::shared_ptr<_Tp>&&) [with _Yp = rclcpp::Subscription<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::LaserScan_<std::allocator<void> >, sensor_msgs::msg::LaserScan_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:129:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::LaserScan_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:55:63:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::LaserScan_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:55:63:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = rclcpp::GenericSubscription]’
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:129:34: note:   ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::LaserScan_<std::allocator<void> >, sensor_msgs::msg::LaserScan_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  129 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::GenericSubscription]’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::LaserScan_<std::allocator<void> >, sensor_msgs::msg::LaserScan_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void> > > >’ to ‘const std::shared_ptr<rclcpp::GenericSubscription>&’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::LaserScan_<std::allocator<void> >, sensor_msgs::msg::LaserScan_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void> > > >’ to ‘std::shared_ptr<rclcpp::GenericSubscription>&&’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:78:88: warning: unused parameter ‘type_name’ [-Wunused-parameter]
+   78 | void TopicMonitor::create_subscriber(const std::string& topic_name, const std::string& type_name) {
+      |                                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Imu_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:58:57:   required from here
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:136:34: error: no match for ‘operator=’ (operand types are ‘std::map<std::__cxx11::basic_string<char>, std::shared_ptr<rclcpp::GenericSubscription> >::mapped_type’ {aka ‘std::shared_ptr<rclcpp::GenericSubscription>’} and ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Imu_<std::allocator<void> >, sensor_msgs::msg::Imu_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void> > > >’)
+  136 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = rclcpp::GenericSubscription]’
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Imu_<std::allocator<void> >, sensor_msgs::msg::Imu_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void> > > >&; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:418:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<rclcpp::GenericSubscription>::operator=(const std::shared_ptr<_Tp>&) [with _Yp = rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Imu_<std::allocator<void> >, sensor_msgs::msg::Imu_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:136:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Imu_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:58:57:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Imu_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:58:57:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = rclcpp::GenericSubscription]’
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:136:34: note:   ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Imu_<std::allocator<void> >, sensor_msgs::msg::Imu_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::auto_ptr<_Up>’
+  136 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Imu_<std::allocator<void> >, sensor_msgs::msg::Imu_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void> > > >; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:446:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<rclcpp::GenericSubscription>::operator=(std::shared_ptr<_Tp>&&) [with _Yp = rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Imu_<std::allocator<void> >, sensor_msgs::msg::Imu_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:136:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Imu_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:58:57:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Imu_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:58:57:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = rclcpp::GenericSubscription]’
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:136:34: note:   ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Imu_<std::allocator<void> >, sensor_msgs::msg::Imu_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  136 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::GenericSubscription]’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Imu_<std::allocator<void> >, sensor_msgs::msg::Imu_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void> > > >’ to ‘const std::shared_ptr<rclcpp::GenericSubscription>&’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Imu_<std::allocator<void> >, sensor_msgs::msg::Imu_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void> > > >’ to ‘std::shared_ptr<rclcpp::GenericSubscription>&&’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:78:88: warning: unused parameter ‘type_name’ [-Wunused-parameter]
+   78 | void TopicMonitor::create_subscriber(const std::string& topic_name, const std::string& type_name) {
+      |                                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::BatteryState_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:61:66:   required from here
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:143:34: error: no match for ‘operator=’ (operand types are ‘std::map<std::__cxx11::basic_string<char>, std::shared_ptr<rclcpp::GenericSubscription> >::mapped_type’ {aka ‘std::shared_ptr<rclcpp::GenericSubscription>’} and ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::BatteryState_<std::allocator<void> >, sensor_msgs::msg::BatteryState_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void> > > >’)
+  143 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = rclcpp::GenericSubscription]’
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::BatteryState_<std::allocator<void> >, sensor_msgs::msg::BatteryState_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void> > > >&; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:418:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<rclcpp::GenericSubscription>::operator=(const std::shared_ptr<_Tp>&) [with _Yp = rclcpp::Subscription<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::BatteryState_<std::allocator<void> >, sensor_msgs::msg::BatteryState_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:143:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::BatteryState_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:61:66:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::BatteryState_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:61:66:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = rclcpp::GenericSubscription]’
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:143:34: note:   ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::BatteryState_<std::allocator<void> >, sensor_msgs::msg::BatteryState_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::auto_ptr<_Up>’
+  143 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::BatteryState_<std::allocator<void> >, sensor_msgs::msg::BatteryState_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void> > > >; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:446:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<rclcpp::GenericSubscription>::operator=(std::shared_ptr<_Tp>&&) [with _Yp = rclcpp::Subscription<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::BatteryState_<std::allocator<void> >, sensor_msgs::msg::BatteryState_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:143:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::BatteryState_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:61:66:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::BatteryState_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:61:66:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = rclcpp::GenericSubscription]’
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:143:34: note:   ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::BatteryState_<std::allocator<void> >, sensor_msgs::msg::BatteryState_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  143 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::GenericSubscription]’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::BatteryState_<std::allocator<void> >, sensor_msgs::msg::BatteryState_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void> > > >’ to ‘const std::shared_ptr<rclcpp::GenericSubscription>&’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::BatteryState_<std::allocator<void> >, sensor_msgs::msg::BatteryState_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::BatteryState_<std::allocator<void> >, std::allocator<void> > > >’ to ‘std::shared_ptr<rclcpp::GenericSubscription>&&’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:78:88: warning: unused parameter ‘type_name’ [-Wunused-parameter]
+   78 | void TopicMonitor::create_subscriber(const std::string& topic_name, const std::string& type_name) {
+      |                                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Temperature_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:64:65:   required from here
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:150:34: error: no match for ‘operator=’ (operand types are ‘std::map<std::__cxx11::basic_string<char>, std::shared_ptr<rclcpp::GenericSubscription> >::mapped_type’ {aka ‘std::shared_ptr<rclcpp::GenericSubscription>’} and ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Temperature_<std::allocator<void> >, sensor_msgs::msg::Temperature_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void> > > >’)
+  150 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = rclcpp::GenericSubscription]’
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Temperature_<std::allocator<void> >, sensor_msgs::msg::Temperature_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void> > > >&; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:418:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<rclcpp::GenericSubscription>::operator=(const std::shared_ptr<_Tp>&) [with _Yp = rclcpp::Subscription<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Temperature_<std::allocator<void> >, sensor_msgs::msg::Temperature_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:150:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Temperature_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:64:65:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Temperature_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:64:65:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = rclcpp::GenericSubscription]’
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:150:34: note:   ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Temperature_<std::allocator<void> >, sensor_msgs::msg::Temperature_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::auto_ptr<_Up>’
+  150 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Temperature_<std::allocator<void> >, sensor_msgs::msg::Temperature_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void> > > >; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:446:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<rclcpp::GenericSubscription>::operator=(std::shared_ptr<_Tp>&&) [with _Yp = rclcpp::Subscription<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Temperature_<std::allocator<void> >, sensor_msgs::msg::Temperature_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:150:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Temperature_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:64:65:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Temperature_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:64:65:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = rclcpp::GenericSubscription]’
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:150:34: note:   ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Temperature_<std::allocator<void> >, sensor_msgs::msg::Temperature_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  150 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::GenericSubscription]’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Temperature_<std::allocator<void> >, sensor_msgs::msg::Temperature_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void> > > >’ to ‘const std::shared_ptr<rclcpp::GenericSubscription>&’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Temperature_<std::allocator<void> >, sensor_msgs::msg::Temperature_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Temperature_<std::allocator<void> >, std::allocator<void> > > >’ to ‘std::shared_ptr<rclcpp::GenericSubscription>&&’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:78:88: warning: unused parameter ‘type_name’ [-Wunused-parameter]
+   78 | void TopicMonitor::create_subscriber(const std::string& topic_name, const std::string& type_name) {
+      |                                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Image_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:67:59:   required from here
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:157:34: error: no match for ‘operator=’ (operand types are ‘std::map<std::__cxx11::basic_string<char>, std::shared_ptr<rclcpp::GenericSubscription> >::mapped_type’ {aka ‘std::shared_ptr<rclcpp::GenericSubscription>’} and ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void> > > >’)
+  157 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = rclcpp::GenericSubscription]’
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void> > > >&; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:418:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<rclcpp::GenericSubscription>::operator=(const std::shared_ptr<_Tp>&) [with _Yp = rclcpp::Subscription<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:157:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Image_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:67:59:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Image_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:67:59:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = rclcpp::GenericSubscription]’
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:157:34: note:   ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::auto_ptr<_Up>’
+  157 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void> > > >; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:446:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<rclcpp::GenericSubscription>::operator=(std::shared_ptr<_Tp>&&) [with _Yp = rclcpp::Subscription<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:157:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Image_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:67:59:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = sensor_msgs::msg::Image_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:67:59:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = rclcpp::GenericSubscription]’
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:157:34: note:   ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  157 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::GenericSubscription]’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void> > > >’ to ‘const std::shared_ptr<rclcpp::GenericSubscription>&’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void>, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Image_<std::allocator<void> >, std::allocator<void> > > >’ to ‘std::shared_ptr<rclcpp::GenericSubscription>&&’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:78:88: warning: unused parameter ‘type_name’ [-Wunused-parameter]
+   78 | void TopicMonitor::create_subscriber(const std::string& topic_name, const std::string& type_name) {
+      |                                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:70:73:   required from here
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:164:34: error: no match for ‘operator=’ (operand types are ‘std::map<std::__cxx11::basic_string<char>, std::shared_ptr<rclcpp::GenericSubscription> >::mapped_type’ {aka ‘std::shared_ptr<rclcpp::GenericSubscription>’} and ‘std::shared_ptr<rclcpp::Subscription<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void>, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void> > > >’)
+  164 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = rclcpp::GenericSubscription]’
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<rclcpp::Subscription<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void>, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void> > > >&; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:418:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<rclcpp::GenericSubscription>::operator=(const std::shared_ptr<_Tp>&) [with _Yp = rclcpp::Subscription<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void>, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:164:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:70:73:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:70:73:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = rclcpp::GenericSubscription]’
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:164:34: note:   ‘std::shared_ptr<rclcpp::Subscription<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void>, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::auto_ptr<_Up>’
+  164 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using std::shared_ptr<_Tp>::_Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<rclcpp::Subscription<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void>, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void> > > >; _Tp = rclcpp::GenericSubscription]’:
+/usr/include/c++/13/bits/shared_ptr.h:446:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<rclcpp::GenericSubscription>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<rclcpp::GenericSubscription>::operator=(std::shared_ptr<_Tp>&&) [with _Yp = rclcpp::Subscription<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void>, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:164:34:   required from ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:70:73:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:183:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<rclcpp::GenericSubscription>&>’
+  183 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp: In instantiation of ‘void TopicMonitor::create_subscriber(const std::string&, const std::string&) [with MessageType = diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>]’:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:70:73:   required from here
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = rclcpp::GenericSubscription]’
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:164:34: note:   ‘std::shared_ptr<rclcpp::Subscription<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void>, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void> > > >’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  164 |         subscribers_[topic_name] = subscription;
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::GenericSubscription]’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void>, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void> > > >’ to ‘const std::shared_ptr<rclcpp::GenericSubscription>&’
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::GenericSubscription]’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from ‘std::shared_ptr<rclcpp::Subscription<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void>, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<diagnostic_msgs::msg::DiagnosticArray_<std::allocator<void> >, std::allocator<void> > > >’ to ‘std::shared_ptr<rclcpp::GenericSubscription>&&’
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/dingo/Programming/ros2-robot-monitor/src/topic_monitor.cpp:78:88: warning: unused parameter ‘type_name’ [-Wunused-parameter]
+   78 | void TopicMonitor::create_subscriber(const std::string& topic_name, const std::string& type_name) {
+      |                                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+In file included from /home/dingo/Programming/ros2-robot-monitor/include/ros2_robot_monitor/ncurses_display.hpp:3,
+                 from /home/dingo/Programming/ros2-robot-monitor/src/ncurses_display.cpp:1:
+/opt/ros/jazzy/include/diagnostic_msgs/diagnostic_msgs/msg/detail/diagnostic_status__struct.hpp:120:34: error: expected unqualified-id before numeric constant
+  120 |   static constexpr unsigned char OK =
+      |                                  ^~
+/opt/ros/jazzy/include/diagnostic_msgs/diagnostic_msgs/msg/detail/diagnostic_status__struct.hpp:120:34: error: expected ‘)’ before numeric constant
+  120 |   static constexpr unsigned char OK =
+      |                                  ^~
+In file included from /usr/include/c++/13/bits/stl_algobase.h:64,
+                 from /usr/include/c++/13/string:51,
+                 from /home/dingo/Programming/ros2-robot-monitor/include/ros2_robot_monitor/ncurses_display.hpp:4:
+/usr/include/c++/13/bits/stl_pair.h: In instantiation of ‘constexpr bool std::operator<(const pair<_T1, _T2>&, const pair<_T1, _T2>&) [with _T1 = __cxx11::basic_string<char>; _T2 = TopicInfo]’:
+/usr/include/c++/13/bits/predefined_ops.h:45:23:   required from ‘constexpr bool __gnu_cxx::__ops::_Iter_less_iter::operator()(_Iterator1, _Iterator2) const [with _Iterator1 = __gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, TopicInfo>*, std::vector<std::pair<std::__cxx11::basic_string<char>, TopicInfo> > >; _Iterator2 = __gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char>, TopicInfo>*, std::vector<std::pair<std::__cxx11::basic_string<char>, TopicInfo> > >]’
+/usr/include/c++/13/bits/stl_algo.h:1819:14:   required from ‘void std::__insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<pair<__cxx11::basic_string<char>, TopicInfo>*, vector<pair<__cxx11::basic_string<char>, TopicInfo> > >; _Compare = __gnu_cxx::__ops::_Iter_less_iter]’
+/usr/include/c++/13/bits/stl_algo.h:1859:25:   required from ‘void std::__final_insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<pair<__cxx11::basic_string<char>, TopicInfo>*, vector<pair<__cxx11::basic_string<char>, TopicInfo> > >; _Compare = __gnu_cxx::__ops::_Iter_less_iter]’
+/usr/include/c++/13/bits/stl_algo.h:1950:31:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<pair<__cxx11::basic_string<char>, TopicInfo>*, vector<pair<__cxx11::basic_string<char>, TopicInfo> > >; _Compare = __gnu_cxx::__ops::_Iter_less_iter]’
+/usr/include/c++/13/bits/stl_algo.h:4861:18:   required from ‘void std::sort(_RAIter, _RAIter) [with _RAIter = __gnu_cxx::__normal_iterator<pair<__cxx11::basic_string<char>, TopicInfo>*, vector<pair<__cxx11::basic_string<char>, TopicInfo> > >]’
+/home/dingo/Programming/ros2-robot-monitor/src/ncurses_display.cpp:104:14:   required from here
+/usr/include/c++/13/bits/stl_pair.h:837:57: error: no match for ‘operator<’ (operand types are ‘const TopicInfo’ and ‘const TopicInfo’)
+  837 |              || (!(__y.first < __x.first) && __x.second < __y.second); }
+      |                                              ~~~~~~~~~~~^~~~~~~~~~~~
+In file included from /usr/include/c++/13/string:48:
+/usr/include/c++/13/bits/stl_iterator.h:455:5: note: candidate: ‘template<class _Iterator> constexpr bool std::operator<(const reverse_iterator<_Iterator>&, const reverse_iterator<_Iterator>&)’
+  455 |     operator<(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:455:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/stl_pair.h:837:57: note:   ‘const TopicInfo’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  837 |              || (!(__y.first < __x.first) && __x.second < __y.second); }
+      |                                              ~~~~~~~~~~~^~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:500:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const reverse_iterator<_Iterator>&, const reverse_iterator<_IteratorR>&)’
+  500 |     operator<(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:500:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/stl_pair.h:837:57: note:   ‘const TopicInfo’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  837 |              || (!(__y.first < __x.first) && __x.second < __y.second); }
+      |                                              ~~~~~~~~~~~^~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:1705:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const move_iterator<_IteratorL>&, const move_iterator<_IteratorR>&)’
+ 1705 |     operator<(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:1705:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/stl_pair.h:837:57: note:   ‘const TopicInfo’ is not derived from ‘const std::move_iterator<_IteratorL>’
+  837 |              || (!(__y.first < __x.first) && __x.second < __y.second); }
+      |                                              ~~~~~~~~~~~^~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:1770:5: note: candidate: ‘template<class _Iterator> constexpr bool std::operator<(const move_iterator<_IteratorL>&, const move_iterator<_IteratorL>&)’
+ 1770 |     operator<(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:1770:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/stl_pair.h:837:57: note:   ‘const TopicInfo’ is not derived from ‘const std::move_iterator<_IteratorL>’
+  837 |              || (!(__y.first < __x.first) && __x.second < __y.second); }
+      |                                              ~~~~~~~~~~~^~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_pair.h:835:5: note: candidate: ‘template<class _T1, class _T2> constexpr bool std::operator<(const pair<_T1, _T2>&, const pair<_T1, _T2>&)’
+  835 |     operator<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_pair.h:835:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/stl_pair.h:837:57: note:   ‘const TopicInfo’ is not derived from ‘const std::pair<_T1, _T2>’
+  837 |              || (!(__y.first < __x.first) && __x.second < __y.second); }
+      |                                              ~~~~~~~~~~~^~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/ros2_monitor.dir/build.make:104: CMakeFiles/ros2_monitor.dir/src/ncurses_display.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/ros2_monitor.dir/build.make:90: CMakeFiles/ros2_monitor.dir/src/topic_monitor.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/ros2_monitor.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

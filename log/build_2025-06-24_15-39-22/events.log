@@ -1,0 +1,295 @@
+[0.000000] (-) TimerEvent: {}
+[0.000417] (ros2_robot_monitor) JobQueued: {'identifier': 'ros2_robot_monitor', 'dependencies': OrderedDict()}
+[0.000829] (ros2_robot_monitor) JobStarted: {'identifier': 'ros2_robot_monitor'}
+[0.011655] (ros2_robot_monitor) JobProgress: {'identifier': 'ros2_robot_monitor', 'progress': 'cmake'}
+[0.012956] (ros2_robot_monitor) JobProgress: {'identifier': 'ros2_robot_monitor', 'progress': 'build'}
+[0.013957] (ros2_robot_monitor) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor', '--', '-j12', '-l12'], 'cwd': '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/196/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'TERM_PROGRAM_VERSION': '1.101.0', 'DESKTOP_SESSION': 'ubuntu', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/196/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/196/usr/share/code/code', 'MANAGERPID': '3375', 'SYSTEMD_EXEC_PID': '3682', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '12413', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:22418', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '44746', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3607,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3607', 'INVOCATION_ID': '7297f5ff1e5d476fa83244b5dc021023', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.FFJA82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-85a0346624.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.083312] (ros2_robot_monitor) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/ros2_monitor.dir/src/topic_monitor.cpp.o\n'}
+[0.099962] (-) TimerEvent: {}
+[0.200147] (-) TimerEvent: {}
+[0.300333] (-) TimerEvent: {}
+[0.400686] (-) TimerEvent: {}
+[0.500905] (-) TimerEvent: {}
+[0.601120] (-) TimerEvent: {}
+[0.701309] (-) TimerEvent: {}
+[0.801730] (-) TimerEvent: {}
+[0.901934] (-) TimerEvent: {}
+[1.002744] (-) TimerEvent: {}
+[1.102937] (-) TimerEvent: {}
+[1.203446] (-) TimerEvent: {}
+[1.303660] (-) TimerEvent: {}
+[1.403849] (-) TimerEvent: {}
+[1.504035] (-) TimerEvent: {}
+[1.604225] (-) TimerEvent: {}
+[1.704464] (-) TimerEvent: {}
+[1.804688] (-) TimerEvent: {}
+[1.904928] (-) TimerEvent: {}
+[2.005138] (-) TimerEvent: {}
+[2.105514] (-) TimerEvent: {}
+[2.205699] (-) TimerEvent: {}
+[2.305923] (-) TimerEvent: {}
+[2.406144] (-) TimerEvent: {}
+[2.506456] (-) TimerEvent: {}
+[2.606666] (-) TimerEvent: {}
+[2.706880] (-) TimerEvent: {}
+[2.807180] (-) TimerEvent: {}
+[2.907352] (-) TimerEvent: {}
+[3.007595] (-) TimerEvent: {}
+[3.107839] (-) TimerEvent: {}
+[3.208060] (-) TimerEvent: {}
+[3.308315] (-) TimerEvent: {}
+[3.408474] (-) TimerEvent: {}
+[3.508655] (-) TimerEvent: {}
+[3.608976] (-) TimerEvent: {}
+[3.709210] (-) TimerEvent: {}
+[3.809435] (-) TimerEvent: {}
+[3.909780] (-) TimerEvent: {}
+[4.009964] (-) TimerEvent: {}
+[4.110183] (-) TimerEvent: {}
+[4.210644] (-) TimerEvent: {}
+[4.310824] (-) TimerEvent: {}
+[4.411037] (-) TimerEvent: {}
+[4.513104] (-) TimerEvent: {}
+[4.613305] (-) TimerEvent: {}
+[4.713641] (-) TimerEvent: {}
+[4.813818] (-) TimerEvent: {}
+[4.913999] (-) TimerEvent: {}
+[5.014307] (-) TimerEvent: {}
+[5.114497] (-) TimerEvent: {}
+[5.214711] (-) TimerEvent: {}
+[5.314885] (-) TimerEvent: {}
+[5.415124] (-) TimerEvent: {}
+[5.515484] (-) TimerEvent: {}
+[5.615678] (-) TimerEvent: {}
+[5.715896] (-) TimerEvent: {}
+[5.816068] (-) TimerEvent: {}
+[5.916244] (-) TimerEvent: {}
+[6.016460] (-) TimerEvent: {}
+[6.116683] (-) TimerEvent: {}
+[6.216928] (-) TimerEvent: {}
+[6.317162] (-) TimerEvent: {}
+[6.417372] (-) TimerEvent: {}
+[6.517573] (-) TimerEvent: {}
+[6.617816] (-) TimerEvent: {}
+[6.718008] (-) TimerEvent: {}
+[6.818245] (-) TimerEvent: {}
+[6.918466] (-) TimerEvent: {}
+[7.018691] (-) TimerEvent: {}
+[7.118883] (-) TimerEvent: {}
+[7.219096] (-) TimerEvent: {}
+[7.319395] (-) TimerEvent: {}
+[7.419589] (-) TimerEvent: {}
+[7.519776] (-) TimerEvent: {}
+[7.619957] (-) TimerEvent: {}
+[7.720282] (-) TimerEvent: {}
+[7.820544] (-) TimerEvent: {}
+[7.920752] (-) TimerEvent: {}
+[8.021085] (-) TimerEvent: {}
+[8.121303] (-) TimerEvent: {}
+[8.221459] (-) TimerEvent: {}
+[8.321697] (-) TimerEvent: {}
+[8.421882] (-) TimerEvent: {}
+[8.522134] (-) TimerEvent: {}
+[8.622482] (-) TimerEvent: {}
+[8.722768] (-) TimerEvent: {}
+[8.822959] (-) TimerEvent: {}
+[8.923184] (-) TimerEvent: {}
+[9.023391] (-) TimerEvent: {}
+[9.123580] (-) TimerEvent: {}
+[9.223759] (-) TimerEvent: {}
+[9.323968] (-) TimerEvent: {}
+[9.424181] (-) TimerEvent: {}
+[9.526459] (-) TimerEvent: {}
+[9.626679] (-) TimerEvent: {}
+[9.726866] (-) TimerEvent: {}
+[9.827075] (-) TimerEvent: {}
+[9.927259] (-) TimerEvent: {}
+[10.027558] (-) TimerEvent: {}
+[10.127735] (-) TimerEvent: {}
+[10.228129] (-) TimerEvent: {}
+[10.328350] (-) TimerEvent: {}
+[10.429240] (-) TimerEvent: {}
+[10.529462] (-) TimerEvent: {}
+[10.629649] (-) TimerEvent: {}
+[10.729860] (-) TimerEvent: {}
+[10.830051] (-) TimerEvent: {}
+[10.930328] (-) TimerEvent: {}
+[11.030581] (-) TimerEvent: {}
+[11.130778] (-) TimerEvent: {}
+[11.230999] (-) TimerEvent: {}
+[11.331170] (-) TimerEvent: {}
+[11.431469] (-) TimerEvent: {}
+[11.531739] (-) TimerEvent: {}
+[11.631998] (-) TimerEvent: {}
+[11.732275] (-) TimerEvent: {}
+[11.832502] (-) TimerEvent: {}
+[11.932728] (-) TimerEvent: {}
+[12.033234] (-) TimerEvent: {}
+[12.133506] (-) TimerEvent: {}
+[12.233685] (-) TimerEvent: {}
+[12.334005] (-) TimerEvent: {}
+[12.434242] (-) TimerEvent: {}
+[12.534433] (-) TimerEvent: {}
+[12.634849] (-) TimerEvent: {}
+[12.735142] (-) TimerEvent: {}
+[12.835441] (-) TimerEvent: {}
+[12.935595] (-) TimerEvent: {}
+[13.035827] (-) TimerEvent: {}
+[13.135996] (-) TimerEvent: {}
+[13.236315] (-) TimerEvent: {}
+[13.336601] (-) TimerEvent: {}
+[13.436765] (-) TimerEvent: {}
+[13.536968] (-) TimerEvent: {}
+[13.637254] (-) TimerEvent: {}
+[13.737421] (-) TimerEvent: {}
+[13.837607] (-) TimerEvent: {}
+[13.937905] (-) TimerEvent: {}
+[14.038193] (-) TimerEvent: {}
+[14.138463] (-) TimerEvent: {}
+[14.238620] (-) TimerEvent: {}
+[14.338774] (-) TimerEvent: {}
+[14.438963] (-) TimerEvent: {}
+[14.539225] (-) TimerEvent: {}
+[14.639382] (-) TimerEvent: {}
+[14.739664] (-) TimerEvent: {}
+[14.839857] (-) TimerEvent: {}
+[14.940046] (-) TimerEvent: {}
+[15.040475] (-) TimerEvent: {}
+[15.140654] (-) TimerEvent: {}
+[15.240861] (-) TimerEvent: {}
+[15.341032] (-) TimerEvent: {}
+[15.441257] (-) TimerEvent: {}
+[15.541464] (-) TimerEvent: {}
+[15.641680] (-) TimerEvent: {}
+[15.741969] (-) TimerEvent: {}
+[15.842256] (-) TimerEvent: {}
+[15.942430] (-) TimerEvent: {}
+[16.042632] (-) TimerEvent: {}
+[16.142802] (-) TimerEvent: {}
+[16.243070] (-) TimerEvent: {}
+[16.343326] (-) TimerEvent: {}
+[16.443459] (-) TimerEvent: {}
+[16.543798] (-) TimerEvent: {}
+[16.643980] (-) TimerEvent: {}
+[16.744176] (-) TimerEvent: {}
+[16.844368] (-) TimerEvent: {}
+[16.944694] (-) TimerEvent: {}
+[17.044866] (-) TimerEvent: {}
+[17.145157] (-) TimerEvent: {}
+[17.245343] (-) TimerEvent: {}
+[17.345467] (-) TimerEvent: {}
+[17.445681] (-) TimerEvent: {}
+[17.545869] (-) TimerEvent: {}
+[17.646058] (-) TimerEvent: {}
+[17.746265] (-) TimerEvent: {}
+[17.846466] (-) TimerEvent: {}
+[17.946751] (-) TimerEvent: {}
+[18.046945] (-) TimerEvent: {}
+[18.147229] (-) TimerEvent: {}
+[18.247429] (-) TimerEvent: {}
+[18.347604] (-) TimerEvent: {}
+[18.448805] (-) TimerEvent: {}
+[18.549112] (-) TimerEvent: {}
+[18.649326] (-) TimerEvent: {}
+[18.749490] (-) TimerEvent: {}
+[18.849681] (-) TimerEvent: {}
+[18.949878] (-) TimerEvent: {}
+[19.050086] (-) TimerEvent: {}
+[19.150296] (-) TimerEvent: {}
+[19.250516] (-) TimerEvent: {}
+[19.350812] (-) TimerEvent: {}
+[19.450979] (-) TimerEvent: {}
+[19.551164] (-) TimerEvent: {}
+[19.651382] (-) TimerEvent: {}
+[19.751561] (-) TimerEvent: {}
+[19.851921] (-) TimerEvent: {}
+[19.952202] (-) TimerEvent: {}
+[20.052410] (-) TimerEvent: {}
+[20.152635] (-) TimerEvent: {}
+[20.252941] (-) TimerEvent: {}
+[20.353149] (-) TimerEvent: {}
+[20.453332] (-) TimerEvent: {}
+[20.553598] (-) TimerEvent: {}
+[20.653846] (-) TimerEvent: {}
+[20.754157] (-) TimerEvent: {}
+[20.854453] (-) TimerEvent: {}
+[20.955477] (-) TimerEvent: {}
+[21.055650] (-) TimerEvent: {}
+[21.155941] (-) TimerEvent: {}
+[21.256128] (-) TimerEvent: {}
+[21.356429] (-) TimerEvent: {}
+[21.456617] (-) TimerEvent: {}
+[21.557111] (-) TimerEvent: {}
+[21.657285] (-) TimerEvent: {}
+[21.757524] (-) TimerEvent: {}
+[21.857695] (-) TimerEvent: {}
+[21.957876] (-) TimerEvent: {}
+[22.058070] (-) TimerEvent: {}
+[22.158270] (-) TimerEvent: {}
+[22.258491] (-) TimerEvent: {}
+[22.358704] (-) TimerEvent: {}
+[22.458902] (-) TimerEvent: {}
+[22.559118] (-) TimerEvent: {}
+[22.659319] (-) TimerEvent: {}
+[22.759535] (-) TimerEvent: {}
+[22.859737] (-) TimerEvent: {}
+[22.960013] (-) TimerEvent: {}
+[23.060256] (-) TimerEvent: {}
+[23.160481] (-) TimerEvent: {}
+[23.260689] (-) TimerEvent: {}
+[23.362170] (-) TimerEvent: {}
+[23.462414] (-) TimerEvent: {}
+[23.562585] (-) TimerEvent: {}
+[23.662870] (-) TimerEvent: {}
+[23.763070] (-) TimerEvent: {}
+[23.863318] (-) TimerEvent: {}
+[23.963555] (-) TimerEvent: {}
+[24.063754] (-) TimerEvent: {}
+[24.164028] (-) TimerEvent: {}
+[24.264308] (-) TimerEvent: {}
+[24.364574] (-) TimerEvent: {}
+[24.464744] (-) TimerEvent: {}
+[24.564926] (-) TimerEvent: {}
+[24.665127] (-) TimerEvent: {}
+[24.765314] (-) TimerEvent: {}
+[24.865535] (-) TimerEvent: {}
+[24.965203] (ros2_robot_monitor) StdoutLine: {'line': b'[ 50%] Linking CXX executable ros2_monitor\n'}
+[24.965581] (-) TimerEvent: {}
+[25.065704] (-) TimerEvent: {}
+[25.165912] (-) TimerEvent: {}
+[25.266115] (-) TimerEvent: {}
+[25.366349] (-) TimerEvent: {}
+[25.466610] (-) TimerEvent: {}
+[25.566843] (-) TimerEvent: {}
+[25.667078] (-) TimerEvent: {}
+[25.770460] (-) TimerEvent: {}
+[25.870646] (-) TimerEvent: {}
+[25.970820] (-) TimerEvent: {}
+[26.071041] (-) TimerEvent: {}
+[26.171223] (-) TimerEvent: {}
+[26.266960] (ros2_robot_monitor) StdoutLine: {'line': b'[100%] Built target ros2_monitor\n'}
+[26.271469] (-) TimerEvent: {}
+[26.277264] (ros2_robot_monitor) CommandEnded: {'returncode': 0}
+[26.278201] (ros2_robot_monitor) JobProgress: {'identifier': 'ros2_robot_monitor', 'progress': 'install'}
+[26.286965] (ros2_robot_monitor) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor'], 'cwd': '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/196/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'TERM_PROGRAM_VERSION': '1.101.0', 'DESKTOP_SESSION': 'ubuntu', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/196/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/196/usr/share/code/code', 'MANAGERPID': '3375', 'SYSTEMD_EXEC_PID': '3682', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '12413', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:22418', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '44746', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3607,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3607', 'INVOCATION_ID': '7297f5ff1e5d476fa83244b5dc021023', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.FFJA82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-85a0346624.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[26.294904] (ros2_robot_monitor) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[26.295115] (ros2_robot_monitor) StdoutLine: {'line': b'-- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/lib/ros2_robot_monitor/ros2_monitor\n'}
+[26.315854] (ros2_robot_monitor) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/lib/ros2_robot_monitor/ros2_monitor" to ""\n'}
+[26.316058] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ament_index/resource_index/package_run_dependencies/ros2_robot_monitor\n'}
+[26.316268] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ament_index/resource_index/parent_prefix_path/ros2_robot_monitor\n'}
+[26.316370] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/ament_prefix_path.sh\n'}
+[26.316474] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/ament_prefix_path.dsv\n'}
+[26.316563] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/path.sh\n'}
+[26.316648] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/path.dsv\n'}
+[26.316732] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.bash\n'}
+[26.316826] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.sh\n'}
+[26.316910] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.zsh\n'}
+[26.316994] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.dsv\n'}
+[26.317078] (ros2_robot_monitor) StdoutLine: {'line': b'-- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/package.dsv\n'}
+[26.317164] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ament_index/resource_index/packages/ros2_robot_monitor\n'}
+[26.317252] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/cmake/ros2_robot_monitorConfig.cmake\n'}
+[26.317486] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/cmake/ros2_robot_monitorConfig-version.cmake\n'}
+[26.318030] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/package.xml\n'}
+[26.318745] (ros2_robot_monitor) CommandEnded: {'returncode': 0}
+[26.330567] (ros2_robot_monitor) JobEnded: {'identifier': 'ros2_robot_monitor', 'rc': 0}
+[26.330992] (-) EventReactorShutdown: {}
