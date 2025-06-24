@@ -25,6 +25,12 @@
 #include <mutex>
 #include <fstream>
 
+struct ImuData {
+    std::chrono::steady_clock::time_point timestamp;
+    double acc_x, acc_y, acc_z;
+    double gyro_x, gyro_y, gyro_z;
+};
+
 struct TopicInfo {
     std::string type;
     double frequency;
@@ -45,10 +51,13 @@ public:
     
     void discover_topics();
     std::map<std::string, TopicInfo> get_topic_data() const;
+    std::deque<ImuData> get_imu_data(const std::string& topic_name) const;
+    std::vector<std::string> get_imu_topics() const;
     
 private:
     std::map<std::string, TopicInfo> topic_data_;
     std::map<std::string, rclcpp::SubscriptionBase::SharedPtr> subscribers_;
+    std::map<std::string, std::deque<ImuData>> imu_data_;
     mutable std::mutex data_mutex_;
     std::ofstream debug_file_;
     
