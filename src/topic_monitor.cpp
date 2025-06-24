@@ -21,7 +21,7 @@ TopicMonitor::TopicMonitor() : Node("topic_monitor") {
             discover_topics();
         });
     
-    debug_file_ << "Timer created, waiting a moment before initial discovery" << std::endl;
+    debug_file_ << "Timer created, starting initial discovery" << std::endl;
     debug_file_.flush();
     
     // Wait a bit for the ROS2 graph to stabilize, then do initial discovery
@@ -218,6 +218,26 @@ std::map<std::string, TopicInfo> TopicMonitor::get_topic_data() const {
     return topic_data_;
 }
 
+std::deque<ImuData> TopicMonitor::get_imu_data(const std::string& topic_name) const {
+    std::lock_guard<std::mutex> lock(data_mutex_);
+    auto it = imu_data_.find(topic_name);
+    if (it != imu_data_.end()) {
+        return it->second;
+    }
+    return std::deque<ImuData>();
+}
+
+std::vector<std::string> TopicMonitor::get_imu_topics() const {
+    std::lock_guard<std::mutex> lock(data_mutex_);
+    std::vector<std::string> imu_topics;
+    for (const auto& [topic_name, topic_info] : topic_data_) {
+        if (topic_info.type == "sensor_msgs/msg/Imu") {
+            imu_topics.push_back(topic_name);
+        }
+    }
+    return imu_topics;
+}
+
 // Message callback implementations
 void TopicMonitor::string_callback(const std::string& topic_name, const std_msgs::msg::String::SharedPtr msg) {
     topic_data_[topic_name].last_data = "'" + msg->data + "'";
@@ -276,11 +296,37 @@ void TopicMonitor::laser_scan_callback(const std::string& topic_name, const sens
 
 void TopicMonitor::imu_callback(const std::string& topic_name, const sensor_msgs::msg::Imu::SharedPtr msg) {
     debug_file_ << "Received IMU message on " << topic_name << std::endl;
-    std::ostringstream oss;
-    oss << std::fixed << std::setprecision(2)
-        << "acc:[" << msg->linear_acceleration.x << "," 
-        << msg->linear_acceleration.y << "," << msg->linear_acceleration.z << "]";
-    topic_data_[topic_name].last_data = oss.str();
+    
+    // Store IMU data for charting (with separate lock scope)
+    {
+        std::lock_guard<std::mutex> lock(data_mutex_);
+        
+        ImuData imu_data;
+        imu_data.timestamp = std::chrono::steady_clock::now();
+        imu_data.acc_x = msg->linear_acceleration.x;
+        imu_data.acc_y = msg->linear_acceleration.y;
+        imu_data.acc_z = msg->linear_acceleration.z;
+        imu_data.gyro_x = msg->angular_velocity.x;
+        imu_data.gyro_y = msg->angular_velocity.y;
+        imu_data.gyro_z = msg->angular_velocity.z;
+        
+        imu_data_[topic_name].push_back(imu_data);
+        
+        // Keep only last 10 seconds of data (assuming ~100Hz IMU)
+        auto cutoff = imu_data.timestamp - std::chrono::seconds(10);
+        while (!imu_data_[topic_name].empty() && imu_data_[topic_name].front().timestamp < cutoff) {
+            imu_data_[topic_name].pop_front();
+        }
+        
+        // Update display string
+        std::ostringstream oss;
+        oss << std::fixed << std::setprecision(2)
+            << "acc:[" << msg->linear_acceleration.x << "," 
+            << msg->linear_acceleration.y << "," << msg->linear_acceleration.z << "]";
+        topic_data_[topic_name].last_data = oss.str();
+    }
+    
+    // Update frequency outside the lock to avoid deadlock
     update_topic_frequency(topic_name);
 }
 

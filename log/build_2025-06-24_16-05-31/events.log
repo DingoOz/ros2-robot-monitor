@@ -1,0 +1,317 @@
+[0.000000] (-) TimerEvent: {}
+[0.000158] (ros2_robot_monitor) JobQueued: {'identifier': 'ros2_robot_monitor', 'dependencies': OrderedDict()}
+[0.000206] (ros2_robot_monitor) JobStarted: {'identifier': 'ros2_robot_monitor'}
+[0.007629] (ros2_robot_monitor) JobProgress: {'identifier': 'ros2_robot_monitor', 'progress': 'cmake'}
+[0.008234] (ros2_robot_monitor) JobProgress: {'identifier': 'ros2_robot_monitor', 'progress': 'build'}
+[0.008873] (ros2_robot_monitor) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor', '--', '-j12', '-l12'], 'cwd': '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/196/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.101.0', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/196/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/196/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/196/usr/share/code/code', 'MANAGERPID': '3375', 'SYSTEMD_EXEC_PID': '3682', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '113063', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:22418', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '44746', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/opt/ros/jazzy/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3607,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3607', 'GTK_EXE_PREFIX': '/snap/code/196/usr', 'INVOCATION_ID': '7297f5ff1e5d476fa83244b5dc021023', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/196/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/196/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.FFJA82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-85a0346624.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/196/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/196/.local/share:/home/dingo/snap/code/196:/snap/code/196/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.066161] (ros2_robot_monitor) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/ros2_monitor.dir/src/topic_monitor.cpp.o\n'}
+[0.099495] (-) TimerEvent: {}
+[0.199662] (-) TimerEvent: {}
+[0.299853] (-) TimerEvent: {}
+[0.400059] (-) TimerEvent: {}
+[0.500294] (-) TimerEvent: {}
+[0.600593] (-) TimerEvent: {}
+[0.700893] (-) TimerEvent: {}
+[0.801213] (-) TimerEvent: {}
+[0.901414] (-) TimerEvent: {}
+[1.001619] (-) TimerEvent: {}
+[1.101799] (-) TimerEvent: {}
+[1.202107] (-) TimerEvent: {}
+[1.302398] (-) TimerEvent: {}
+[1.402595] (-) TimerEvent: {}
+[1.502900] (-) TimerEvent: {}
+[1.603072] (-) TimerEvent: {}
+[1.703252] (-) TimerEvent: {}
+[1.803767] (-) TimerEvent: {}
+[1.903981] (-) TimerEvent: {}
+[2.004157] (-) TimerEvent: {}
+[2.104332] (-) TimerEvent: {}
+[2.204541] (-) TimerEvent: {}
+[2.304725] (-) TimerEvent: {}
+[2.405026] (-) TimerEvent: {}
+[2.505261] (-) TimerEvent: {}
+[2.605427] (-) TimerEvent: {}
+[2.705640] (-) TimerEvent: {}
+[2.805949] (-) TimerEvent: {}
+[2.906122] (-) TimerEvent: {}
+[3.006309] (-) TimerEvent: {}
+[3.106524] (-) TimerEvent: {}
+[3.206701] (-) TimerEvent: {}
+[3.306920] (-) TimerEvent: {}
+[3.407092] (-) TimerEvent: {}
+[3.507531] (-) TimerEvent: {}
+[3.607837] (-) TimerEvent: {}
+[3.708137] (-) TimerEvent: {}
+[3.808429] (-) TimerEvent: {}
+[3.908603] (-) TimerEvent: {}
+[4.008816] (-) TimerEvent: {}
+[4.109024] (-) TimerEvent: {}
+[4.209230] (-) TimerEvent: {}
+[4.309434] (-) TimerEvent: {}
+[4.409662] (-) TimerEvent: {}
+[4.509839] (-) TimerEvent: {}
+[4.610088] (-) TimerEvent: {}
+[4.710298] (-) TimerEvent: {}
+[4.810609] (-) TimerEvent: {}
+[4.910781] (-) TimerEvent: {}
+[5.011016] (-) TimerEvent: {}
+[5.111203] (-) TimerEvent: {}
+[5.211446] (-) TimerEvent: {}
+[5.311659] (-) TimerEvent: {}
+[5.411961] (-) TimerEvent: {}
+[5.512268] (-) TimerEvent: {}
+[5.612565] (-) TimerEvent: {}
+[5.712743] (-) TimerEvent: {}
+[5.813013] (-) TimerEvent: {}
+[5.913191] (-) TimerEvent: {}
+[6.013471] (-) TimerEvent: {}
+[6.113630] (-) TimerEvent: {}
+[6.213910] (-) TimerEvent: {}
+[6.314148] (-) TimerEvent: {}
+[6.414455] (-) TimerEvent: {}
+[6.515883] (-) TimerEvent: {}
+[6.616063] (-) TimerEvent: {}
+[6.716362] (-) TimerEvent: {}
+[6.816658] (-) TimerEvent: {}
+[6.917006] (-) TimerEvent: {}
+[7.017196] (-) TimerEvent: {}
+[7.117513] (-) TimerEvent: {}
+[7.217734] (-) TimerEvent: {}
+[7.317882] (-) TimerEvent: {}
+[7.418056] (-) TimerEvent: {}
+[7.518237] (-) TimerEvent: {}
+[7.618425] (-) TimerEvent: {}
+[7.718652] (-) TimerEvent: {}
+[7.818967] (-) TimerEvent: {}
+[7.919137] (-) TimerEvent: {}
+[8.019314] (-) TimerEvent: {}
+[8.119491] (-) TimerEvent: {}
+[8.219709] (-) TimerEvent: {}
+[8.319928] (-) TimerEvent: {}
+[8.420124] (-) TimerEvent: {}
+[8.520333] (-) TimerEvent: {}
+[8.620512] (-) TimerEvent: {}
+[8.720683] (-) TimerEvent: {}
+[8.820878] (-) TimerEvent: {}
+[8.921068] (-) TimerEvent: {}
+[9.021297] (-) TimerEvent: {}
+[9.121527] (-) TimerEvent: {}
+[9.221836] (-) TimerEvent: {}
+[9.322015] (-) TimerEvent: {}
+[9.422405] (-) TimerEvent: {}
+[9.522627] (-) TimerEvent: {}
+[9.626160] (-) TimerEvent: {}
+[9.726461] (-) TimerEvent: {}
+[9.826759] (-) TimerEvent: {}
+[9.927011] (-) TimerEvent: {}
+[10.027316] (-) TimerEvent: {}
+[10.127524] (-) TimerEvent: {}
+[10.227714] (-) TimerEvent: {}
+[10.328018] (-) TimerEvent: {}
+[10.428313] (-) TimerEvent: {}
+[10.528487] (-) TimerEvent: {}
+[10.628699] (-) TimerEvent: {}
+[10.729008] (-) TimerEvent: {}
+[10.829200] (-) TimerEvent: {}
+[10.930318] (-) TimerEvent: {}
+[11.030523] (-) TimerEvent: {}
+[11.130726] (-) TimerEvent: {}
+[11.230929] (-) TimerEvent: {}
+[11.331129] (-) TimerEvent: {}
+[11.431339] (-) TimerEvent: {}
+[11.531542] (-) TimerEvent: {}
+[11.631854] (-) TimerEvent: {}
+[11.732045] (-) TimerEvent: {}
+[11.832253] (-) TimerEvent: {}
+[11.933541] (-) TimerEvent: {}
+[12.033792] (-) TimerEvent: {}
+[12.134129] (-) TimerEvent: {}
+[12.234323] (-) TimerEvent: {}
+[12.334516] (-) TimerEvent: {}
+[12.434726] (-) TimerEvent: {}
+[12.534934] (-) TimerEvent: {}
+[12.635119] (-) TimerEvent: {}
+[12.735673] (-) TimerEvent: {}
+[12.835842] (-) TimerEvent: {}
+[12.936019] (-) TimerEvent: {}
+[13.036248] (-) TimerEvent: {}
+[13.136561] (-) TimerEvent: {}
+[13.236734] (-) TimerEvent: {}
+[13.336944] (-) TimerEvent: {}
+[13.437147] (-) TimerEvent: {}
+[13.537305] (-) TimerEvent: {}
+[13.637631] (-) TimerEvent: {}
+[13.737852] (-) TimerEvent: {}
+[13.838024] (-) TimerEvent: {}
+[13.938360] (-) TimerEvent: {}
+[14.038665] (-) TimerEvent: {}
+[14.138850] (-) TimerEvent: {}
+[14.239006] (-) TimerEvent: {}
+[14.339290] (-) TimerEvent: {}
+[14.439457] (-) TimerEvent: {}
+[14.539995] (-) TimerEvent: {}
+[14.640160] (-) TimerEvent: {}
+[14.740366] (-) TimerEvent: {}
+[14.840589] (-) TimerEvent: {}
+[14.940897] (-) TimerEvent: {}
+[15.041193] (-) TimerEvent: {}
+[15.141491] (-) TimerEvent: {}
+[15.241769] (-) TimerEvent: {}
+[15.341948] (-) TimerEvent: {}
+[15.442126] (-) TimerEvent: {}
+[15.542301] (-) TimerEvent: {}
+[15.657138] (-) TimerEvent: {}
+[15.757339] (-) TimerEvent: {}
+[15.857588] (-) TimerEvent: {}
+[15.957846] (-) TimerEvent: {}
+[16.058109] (-) TimerEvent: {}
+[16.158358] (-) TimerEvent: {}
+[16.258550] (-) TimerEvent: {}
+[16.358722] (-) TimerEvent: {}
+[16.459049] (-) TimerEvent: {}
+[16.559238] (-) TimerEvent: {}
+[16.659529] (-) TimerEvent: {}
+[16.759695] (-) TimerEvent: {}
+[16.859899] (-) TimerEvent: {}
+[16.960122] (-) TimerEvent: {}
+[17.060435] (-) TimerEvent: {}
+[17.160608] (-) TimerEvent: {}
+[17.260915] (-) TimerEvent: {}
+[17.361085] (-) TimerEvent: {}
+[17.461255] (-) TimerEvent: {}
+[17.561553] (-) TimerEvent: {}
+[17.661872] (-) TimerEvent: {}
+[17.762046] (-) TimerEvent: {}
+[17.862334] (-) TimerEvent: {}
+[17.962623] (-) TimerEvent: {}
+[18.062799] (-) TimerEvent: {}
+[18.163142] (-) TimerEvent: {}
+[18.263339] (-) TimerEvent: {}
+[18.363586] (-) TimerEvent: {}
+[18.463901] (-) TimerEvent: {}
+[18.564136] (-) TimerEvent: {}
+[18.664341] (-) TimerEvent: {}
+[18.764519] (-) TimerEvent: {}
+[18.864834] (-) TimerEvent: {}
+[18.965061] (-) TimerEvent: {}
+[19.065261] (-) TimerEvent: {}
+[19.165446] (-) TimerEvent: {}
+[19.265632] (-) TimerEvent: {}
+[19.365944] (-) TimerEvent: {}
+[19.466113] (-) TimerEvent: {}
+[19.566398] (-) TimerEvent: {}
+[19.666601] (-) TimerEvent: {}
+[19.768900] (-) TimerEvent: {}
+[19.869099] (-) TimerEvent: {}
+[19.969340] (-) TimerEvent: {}
+[20.069610] (-) TimerEvent: {}
+[20.169881] (-) TimerEvent: {}
+[20.270138] (-) TimerEvent: {}
+[20.370407] (-) TimerEvent: {}
+[20.470665] (-) TimerEvent: {}
+[20.570943] (-) TimerEvent: {}
+[20.671333] (-) TimerEvent: {}
+[20.771601] (-) TimerEvent: {}
+[20.871940] (-) TimerEvent: {}
+[20.973910] (-) TimerEvent: {}
+[21.074112] (-) TimerEvent: {}
+[21.174312] (-) TimerEvent: {}
+[21.274562] (-) TimerEvent: {}
+[21.374801] (-) TimerEvent: {}
+[21.475065] (-) TimerEvent: {}
+[21.575391] (-) TimerEvent: {}
+[21.675652] (-) TimerEvent: {}
+[21.775876] (-) TimerEvent: {}
+[21.876081] (-) TimerEvent: {}
+[21.976294] (-) TimerEvent: {}
+[22.076531] (-) TimerEvent: {}
+[22.176784] (-) TimerEvent: {}
+[22.277022] (-) TimerEvent: {}
+[22.377392] (-) TimerEvent: {}
+[22.477588] (-) TimerEvent: {}
+[22.577914] (-) TimerEvent: {}
+[22.678117] (-) TimerEvent: {}
+[22.778326] (-) TimerEvent: {}
+[22.878540] (-) TimerEvent: {}
+[22.979000] (-) TimerEvent: {}
+[23.079251] (-) TimerEvent: {}
+[23.179470] (-) TimerEvent: {}
+[23.279689] (-) TimerEvent: {}
+[23.379919] (-) TimerEvent: {}
+[23.480112] (-) TimerEvent: {}
+[23.580313] (-) TimerEvent: {}
+[23.680532] (-) TimerEvent: {}
+[23.780751] (-) TimerEvent: {}
+[23.880966] (-) TimerEvent: {}
+[23.981170] (-) TimerEvent: {}
+[24.081408] (-) TimerEvent: {}
+[24.182894] (-) TimerEvent: {}
+[24.283103] (-) TimerEvent: {}
+[24.383334] (-) TimerEvent: {}
+[24.483573] (-) TimerEvent: {}
+[24.583821] (-) TimerEvent: {}
+[24.684039] (-) TimerEvent: {}
+[24.784249] (-) TimerEvent: {}
+[24.884723] (-) TimerEvent: {}
+[24.984953] (-) TimerEvent: {}
+[25.085212] (-) TimerEvent: {}
+[25.185444] (-) TimerEvent: {}
+[25.285640] (-) TimerEvent: {}
+[25.385848] (-) TimerEvent: {}
+[25.486074] (-) TimerEvent: {}
+[25.586314] (-) TimerEvent: {}
+[25.686515] (-) TimerEvent: {}
+[25.786744] (-) TimerEvent: {}
+[25.887102] (-) TimerEvent: {}
+[25.987716] (-) TimerEvent: {}
+[26.088033] (-) TimerEvent: {}
+[26.188231] (-) TimerEvent: {}
+[26.288532] (-) TimerEvent: {}
+[26.388766] (-) TimerEvent: {}
+[26.489030] (-) TimerEvent: {}
+[26.589244] (-) TimerEvent: {}
+[26.689485] (-) TimerEvent: {}
+[26.789699] (-) TimerEvent: {}
+[26.890032] (-) TimerEvent: {}
+[26.984036] (ros2_robot_monitor) StdoutLine: {'line': b'[ 50%] Linking CXX executable ros2_monitor\n'}
+[26.990382] (-) TimerEvent: {}
+[27.090609] (-) TimerEvent: {}
+[27.190862] (-) TimerEvent: {}
+[27.291079] (-) TimerEvent: {}
+[27.391366] (-) TimerEvent: {}
+[27.491667] (-) TimerEvent: {}
+[27.592057] (-) TimerEvent: {}
+[27.692353] (-) TimerEvent: {}
+[27.792602] (-) TimerEvent: {}
+[27.892834] (-) TimerEvent: {}
+[27.993065] (-) TimerEvent: {}
+[28.093318] (-) TimerEvent: {}
+[28.193508] (-) TimerEvent: {}
+[28.293717] (-) TimerEvent: {}
+[28.395108] (-) TimerEvent: {}
+[28.496634] (-) TimerEvent: {}
+[28.501182] (ros2_robot_monitor) StdoutLine: {'line': b'[100%] Built target ros2_monitor\n'}
+[28.512723] (ros2_robot_monitor) CommandEnded: {'returncode': 0}
+[28.513462] (ros2_robot_monitor) JobProgress: {'identifier': 'ros2_robot_monitor', 'progress': 'install'}
+[28.521627] (ros2_robot_monitor) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor'], 'cwd': '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/196/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.101.0', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/196/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/196/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/196/usr/share/code/code', 'MANAGERPID': '3375', 'SYSTEMD_EXEC_PID': '3682', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '113063', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:22418', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '44746', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/opt/ros/jazzy/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3607,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3607', 'GTK_EXE_PREFIX': '/snap/code/196/usr', 'INVOCATION_ID': '7297f5ff1e5d476fa83244b5dc021023', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/196/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/196/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.FFJA82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-85a0346624.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/196/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/ros2-robot-monitor/build/ros2_robot_monitor', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/196/.local/share:/home/dingo/snap/code/196:/snap/code/196/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[28.532558] (ros2_robot_monitor) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[28.532833] (ros2_robot_monitor) StdoutLine: {'line': b'-- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/lib/ros2_robot_monitor/ros2_monitor\n'}
+[28.571205] (ros2_robot_monitor) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/lib/ros2_robot_monitor/ros2_monitor" to ""\n'}
+[28.571616] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ament_index/resource_index/package_run_dependencies/ros2_robot_monitor\n'}
+[28.571673] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ament_index/resource_index/parent_prefix_path/ros2_robot_monitor\n'}
+[28.571723] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/ament_prefix_path.sh\n'}
+[28.571772] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/ament_prefix_path.dsv\n'}
+[28.571818] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/path.sh\n'}
+[28.571875] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/environment/path.dsv\n'}
+[28.571920] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.bash\n'}
+[28.571965] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.sh\n'}
+[28.572011] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.zsh\n'}
+[28.572057] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/local_setup.dsv\n'}
+[28.572209] (ros2_robot_monitor) StdoutLine: {'line': b'-- Installing: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/package.dsv\n'}
+[28.572319] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ament_index/resource_index/packages/ros2_robot_monitor\n'}
+[28.572374] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/cmake/ros2_robot_monitorConfig.cmake\n'}
+[28.572421] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/cmake/ros2_robot_monitorConfig-version.cmake\n'}
+[28.572471] (ros2_robot_monitor) StdoutLine: {'line': b'-- Up-to-date: /home/dingo/Programming/ros2-robot-monitor/install/ros2_robot_monitor/share/ros2_robot_monitor/package.xml\n'}
+[28.574479] (ros2_robot_monitor) CommandEnded: {'returncode': 0}
+[28.591775] (ros2_robot_monitor) JobEnded: {'identifier': 'ros2_robot_monitor', 'rc': 0}
+[28.592318] (-) EventReactorShutdown: {}
