@@ -6,6 +6,7 @@
 #include <thread>
 #include <chrono>
 #include <iterator>
+#include <locale.h>
 
 NCursesDisplay::NCursesDisplay(std::shared_ptr<TopicMonitor> monitor)
     : monitor_(monitor), stdscr_(nullptr), chart_win_(nullptr), running_(true), 
@@ -17,6 +18,9 @@ NCursesDisplay::~NCursesDisplay() {
 }
 
 void NCursesDisplay::init_display() {
+    // Set locale for Unicode support
+    setlocale(LC_ALL, "");
+    
     stdscr_ = initscr();
     if (!stdscr_) {
         throw std::runtime_error("Failed to initialize ncurses");
@@ -35,11 +39,13 @@ void NCursesDisplay::init_display() {
 void NCursesDisplay::init_colors() {
     if (has_colors()) {
         start_color();
-        init_pair(1, COLOR_GREEN, COLOR_BLACK);   // Active topics
-        init_pair(2, COLOR_RED, COLOR_BLACK);     // Inactive topics
-        init_pair(3, COLOR_YELLOW, COLOR_BLACK);  // Headers
-        init_pair(4, COLOR_CYAN, COLOR_BLACK);    // Selected row
-        init_pair(5, COLOR_MAGENTA, COLOR_BLACK); // Frequency
+        init_pair(1, COLOR_GREEN, COLOR_BLACK);   // Active topics / Accel X
+        init_pair(2, COLOR_RED, COLOR_BLACK);     // Inactive topics / Accel Y
+        init_pair(3, COLOR_YELLOW, COLOR_BLACK);  // Headers / Accel Z
+        init_pair(4, COLOR_CYAN, COLOR_BLACK);    // Selected row / Gyro X
+        init_pair(5, COLOR_MAGENTA, COLOR_BLACK); // Frequency / Gyro Y
+        init_pair(6, COLOR_BLUE, COLOR_BLACK);    // Gyro Z
+        init_pair(7, COLOR_WHITE, COLOR_BLACK);   // Default/Labels
     }
 }
 
@@ -306,26 +312,26 @@ void NCursesDisplay::draw_imu_chart() {
         gyro_z.push_back(data.gyro_z);
     }
     
-    // Draw charts (each taking about height/6 rows)
+    // Draw charts (each taking about height/6 rows) with different colors
     int chart_height = (height - 4) / 6;
-    draw_text_chart(stdscr_, acc_x, "Linear Acc X", 2, chart_height);
-    draw_text_chart(stdscr_, acc_y, "Linear Acc Y", 2 + chart_height, chart_height);  
-    draw_text_chart(stdscr_, acc_z, "Linear Acc Z", 2 + 2*chart_height, chart_height);
-    draw_text_chart(stdscr_, gyro_x, "Angular Vel X", 2 + 3*chart_height, chart_height);
-    draw_text_chart(stdscr_, gyro_y, "Angular Vel Y", 2 + 4*chart_height, chart_height);
-    draw_text_chart(stdscr_, gyro_z, "Angular Vel Z", 2 + 5*chart_height, chart_height);
+    draw_text_chart(stdscr_, acc_x, "Linear Acc X", 2, chart_height, 1);  // Green
+    draw_text_chart(stdscr_, acc_y, "Linear Acc Y", 2 + chart_height, chart_height, 2);  // Red
+    draw_text_chart(stdscr_, acc_z, "Linear Acc Z", 2 + 2*chart_height, chart_height, 3);  // Yellow
+    draw_text_chart(stdscr_, gyro_x, "Angular Vel X", 2 + 3*chart_height, chart_height, 4);  // Cyan
+    draw_text_chart(stdscr_, gyro_y, "Angular Vel Y", 2 + 4*chart_height, chart_height, 5);  // Magenta
+    draw_text_chart(stdscr_, gyro_z, "Angular Vel Z", 2 + 5*chart_height, chart_height, 6);  // Blue
 }
 
-void NCursesDisplay::draw_text_chart(WINDOW* win, const std::vector<double>& data, const std::string& title, int start_y, int height) {
-    if (data.empty() || height < 2) return;
+void NCursesDisplay::draw_text_chart(WINDOW* win, const std::vector<double>& data, const std::string& title, int start_y, int height, int color_pair) {
+    if (data.empty() || height < 3) return;
     
     int width;
     getmaxyx(win, height, width);
     
-    // Chart title
-    attron(COLOR_PAIR(3));
+    // Chart title with chart color
+    attron(COLOR_PAIR(color_pair) | A_BOLD);
     mvprintw(start_y, 0, "%s", title.c_str());
-    attroff(COLOR_PAIR(3));
+    attroff(COLOR_PAIR(color_pair) | A_BOLD);
     
     // Find min/max for scaling
     auto minmax = std::minmax_element(data.begin(), data.end());
@@ -339,28 +345,73 @@ void NCursesDisplay::draw_text_chart(WINDOW* win, const std::vector<double>& dat
     
     // Chart area dimensions
     int chart_width = std::min(static_cast<int>(data.size()), width - 15);
-    int chart_height_actual = height - 1;
+    int chart_height_actual = height - 2;
     
     if (chart_width <= 0 || chart_height_actual <= 0) return;
     
-    // Draw Y-axis labels
-    attron(COLOR_PAIR(5));
+    // Draw Y-axis labels with subtle color
+    attron(COLOR_PAIR(7));
     mvprintw(start_y + 1, 0, "%6.2f", max_val);
-    mvprintw(start_y + chart_height_actual/2, 0, "%6.2f", (min_val + max_val) / 2);
-    mvprintw(start_y + chart_height_actual, 0, "%6.2f", min_val);
-    attroff(COLOR_PAIR(5));
+    mvprintw(start_y + 1 + chart_height_actual/2, 0, "%6.2f", (min_val + max_val) / 2);
+    mvprintw(start_y + 1 + chart_height_actual, 0, "%6.2f", min_val);
+    attroff(COLOR_PAIR(7));
     
-    // Draw the chart using text characters
+    // Draw the filled area chart with simple reliable characters
     for (int x = 0; x < chart_width; ++x) {
         int data_idx = data.size() - chart_width + x;
+        
         if (data_idx >= 0 && data_idx < static_cast<int>(data.size())) {
             double normalized = (data[data_idx] - min_val) / (max_val - min_val);
-            int y_pos = start_y + chart_height_actual - static_cast<int>(normalized * chart_height_actual);
+            double chart_value = normalized * chart_height_actual;
             
-            if (y_pos >= start_y + 1 && y_pos <= start_y + chart_height_actual) {
-                attron(COLOR_PAIR(1));
-                mvprintw(y_pos, 8 + x, "*");
-                attroff(COLOR_PAIR(1));
+            // Calculate which row the data point falls in
+            int data_row = static_cast<int>(chart_value);
+            
+            // Clamp data_row to valid range
+            if (data_row >= chart_height_actual) {
+                data_row = chart_height_actual - 1;
+            }
+            if (data_row < 0) {
+                data_row = 0;
+            }
+            
+            // Fill from bottom up to the data point
+            for (int y = 0; y < chart_height_actual; ++y) {
+                int screen_y = start_y + 1 + chart_height_actual - 1 - y;
+                
+                if (y <= data_row) {
+                    // Fill with colored character based on position
+                    attron(COLOR_PAIR(color_pair));
+                    
+                    // Use different ASCII characters for better visual effect
+                    if (y == data_row) {
+                        // Top of the fill - use a different character for sub-pixel precision
+                        double fraction = chart_value - data_row;
+                        if (fraction > 0.75) {
+                            mvprintw(screen_y, 8 + x, "#");  // Almost full
+                        } else if (fraction > 0.5) {
+                            mvprintw(screen_y, 8 + x, "=");  // Upper half
+                        } else if (fraction > 0.25) {
+                            mvprintw(screen_y, 8 + x, "-");  // Lower half
+                        } else {
+                            mvprintw(screen_y, 8 + x, ".");  // Small bottom
+                        }
+                    } else {
+                        // Full fill below data point
+                        mvprintw(screen_y, 8 + x, "#");
+                    }
+                    
+                    attroff(COLOR_PAIR(color_pair));
+                } else {
+                    // Empty space above data point
+                    mvprintw(screen_y, 8 + x, " ");
+                }
+            }
+        } else {
+            // No data for this column, fill with spaces
+            for (int y = 0; y < chart_height_actual; ++y) {
+                int screen_y = start_y + 1 + chart_height_actual - 1 - y;
+                mvprintw(screen_y, 8 + x, " ");
             }
         }
     }

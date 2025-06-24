@@ -44,5 +44,5 @@ private:
     bool handle_input();
     void init_colors();
     std::vector<std::string> get_imu_topics();
-    void draw_text_chart(WINDOW* win, const std::vector<double>& data, const std::string& title, int start_y, int height);
+    void draw_text_chart(WINDOW* win, const std::vector<double>& data, const std::string& title, int start_y, int height, int color_pair);
 };

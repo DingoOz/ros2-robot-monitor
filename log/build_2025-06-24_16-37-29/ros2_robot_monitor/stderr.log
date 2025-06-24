@@ -1,0 +1,4 @@
+/home/dingo/Programming/ros2-robot-monitor/src/ncurses_display.cpp: In member function ‘void NCursesDisplay::draw_text_chart(WINDOW*, const std::vector<double, std::allocator<double> >&, const std::string&, int, int, int)’:
+/home/dingo/Programming/ros2-robot-monitor/src/ncurses_display.cpp:375:24: warning: unused variable ‘char_top’ [-Wunused-variable]
+  375 |                 double char_top = (y + 1) * 4.0;
+      |                        ^~~~~~~~
